@@ -1,0 +1,74 @@
+.site-wrapper {
+	width: 1000px;
+	margin: 0 auto;	
+}
+.clearfix::after{
+	content: '';
+	display: table;
+	clear: both;
+}
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+header .header-inner {
+	/* background:  green; */
+	background-image: radial-gradient(circle, red, yellow, green);
+	font-size: 32px;
+	text-align: center;
+	padding: 30px 0;
+}
+
+.main-navagation .main-menu{
+	list-style-type: none;
+	padding: 0;
+	margin :  0;
+	background: #bf4529;
+}
+.main-navagation .main-menu li.menu-item{
+	background:  gray;
+	float: left;
+	position: relative;
+}
+.main-navagation .main-menu li.submenu-item{
+	
+	position: relative;
+}
+.main-navagation .main-menu li.menu-item:hover > ul.sub-menu{
+	display: block;
+}
+.main-navagation .main-menu li.submenu-item:hover > ul.sub-menu{
+	display: block;
+}
+.main-navagation .main-menu li a{
+	color: white;
+	font-size: 15px;
+	display: block;
+	background: red;
+	text-decoration: none;
+	padding: 10px 20px;	
+}
+.main-navagation .main-menu li a:hover{
+	background: tomato;
+}
+
+/* ///////////////////// */
+ 
+nav li.menu-item > .sub-menu{
+	display: none;
+	position: absolute;
+	min-width: 200px;
+	top: 37px;
+	left: 0;
+}
+nav li.menu-item .sub-menu .sub-menu{
+	display: none;
+	min-width: 200px;
+	position: absolute;
+	top: 0;
+	left: 200px;
+}
+nav .sub-menu > li.submenu-item{
+	border-bottom: 1px solid white;
+}

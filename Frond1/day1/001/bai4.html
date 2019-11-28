@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+
+<table>
+
+    <tr>
+        <td colspan="4">
+            <input id="display" value="" type="text /">
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <button type="button" id="seven" onclick="displayNumber(this.innerText)">7</button>
+        </td>
+        <td>
+            <button type="button" id="eight" onclick="displayNumber(this.innerText)">8</button>
+        </td>
+        <td>
+            <button type="button" id="nine" onclick="displayNumber(this.innerText)">9</button>
+        </td>
+        <td>
+            <button type="button" id="plus" onclick="clickOperator(this.innerText)">+</button>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <button type="button" id="four" onclick="displayNumber(this.innerText)">4</button>
+        </td>
+        <td>
+            <button type="button" id="five" onclick="displayNumber(this.innerText)">5</button>
+        </td>
+        <td>
+            <button type="button" id="six" onclick="displayNumber(this.innerText)">6</button>
+        </td>
+        <td>
+            <button type="button" id="minus" onclick="clickOperator(this.innerText)">-</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button type="button" id="one" onclick="displayNumber(this.innerText)">1</button>
+        </td>
+        <td>
+            <button type="button" id="two" onclick="displayNumber(this.innerText)">2</button>
+        </td>
+        <td>
+            <button type="button" id="three" onclick="displayNumber(this.innerText)">3</button>
+        </td>
+        <td>
+            <button type="button" id="multi" onclick="clickOperator(this.innerText)">*</button>
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="2">
+            <button type="button" id="equal" onclick="equal()">=</button>
+        </td>
+        <td>
+            <button type="button" id="divide" onclick="document.getElementById('display').value=''">C</button>
+        </td>
+        <td>
+            <button type="button" id="divide" onclick="clickOperator(this.innerText)">/</button>
+        </td>
+    </tr>
+
+</table>
+
+
+<script>
+    let firstOperand;
+    let secondOperand;
+    let operator = undefined;
+    function displayNumber(number) {
+        let display = document.getElementById("display");
+        if (operator === undefined) {
+            display.value += number;
+            firstOperand = display.value;
+        } else {
+            if (secondOperand === undefined) {
+                display.value = number;
+            } else {
+                display.value += number;
+            }
+            secondOperand = display.value;
+        }
+    }
+    
+    function clickOperator(selectedOperator) {
+        operator = selectedOperator;
+    }
+    
+    function equal() {
+        let display = document.getElementById("display");
+        firstOperand = parseInt(firstOperand);
+        secondOperand = parseInt(secondOperand);
+        switch (operator) {
+            case '+':
+                display.value = firstOperand + secondOperand;
+                break;
+            case '-':
+                display.value = firstOperand - secondOperand;
+                break;
+            case '*':
+                display.value = firstOperand * secondOperand;
+                break;
+            case '/':
+                display.value = firstOperand / secondOperand;
+                break;
+        }
+        firstOperand = display.value;
+        secondOperand = undefined;
+    }
+    
+</script>
+
+</body>
+</html>

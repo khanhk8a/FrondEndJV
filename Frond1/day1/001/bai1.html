@@ -3,15 +3,62 @@
 <head>
 	<meta charset="UTF-8">
 	<title> Bài Tập 1 </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	
+	<style type="text/css" media="screen">
+			.row {
+
+				margin: 0 250px;
+			}
+			#label .lb2{
+				margin-left: 360px;
+			}
+			
+			container-label .form-control{
+				width: 250px;
+				display: inline-flex;
+			}
+			#container-label .right {
+				float: right;
+				width: 200px;
+			} 
+			.list-group{
+				margin: 0 264px;
+
+			}
+		
+	</style>
 </head>
 <body>
-	<h1>Đây là thẻ h1</h1>
-	<h2>Đây là thẻ h2</h2>
-	<h3>Đây là thẻ h3</h3>
-	<h4>Đây là thẻ h4</h4>
-	<h5>Đây là thẻ h5</h5>
-	<h6>Đây là thẻ h6</h6>
-	<p>đây là thẻ chứa đoạn văn bản</p>
-	<div>đây là thẻ div để chứa các thẻ khác</div>
+	<div class="row">
+
+		<div class="col form group">
+			<div id="label">
+			<label class="lb1" for="genderFilter2">Catalog</label>
+			<button class="lb2" type="button">SP Có Hàng Tiền Lớn</button>
+			<button  class="lb2"type="button" onclick="totaltien();">Tổng số tiền</button>
+			</div>
+			<div class="container-label">
+				<select class="form-control" id="genderFilter">
+					<option value="null">All</option>
+					<option value="male">Electronics</option>
+					<option value="female">Wood</option>
+				</select>
+				<input class="right" type="text" name="giatritongtien" readonly="readonly">
+			</div>
+		</div>
+	</div>
+	<div id="content1"><ul id ="userList" class="list-group">
+		<li class="list-group-item">Tom</li>
+		<!-- <li class="list-group-item">Maria</li>
+		<li class="list-group-item">Tarra</li>
+		<li class="list-group-item">Krixi</li>
+		<li class="list-group-item">Telanas</li> -->
+	</ul></div>
+	<script src="hocjs.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

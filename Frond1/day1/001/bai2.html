@@ -4,25 +4,26 @@
 	<meta charset="UTF-8">
 	<title>BÀI TẬP 2</title>
 </head>
-<script type="text/javascript">
-	var employees = [{name:'khanh',age:28},
-	{name:'khan',age:27},
-	{name:'kha',age:24}
-	];
-	var content = '';
-	for (var employee of employees){
-			content +='li' + employee.name + 'li';
 
-	};
-	function xx(content){
-	document.getElementById('contain-list').innerHTML = content.toString();
-	}	
-</script>
 <body>
 	<div id="div1">
 		<ul id="contain-list">
 			
 		</ul>
 	</div>
+	<script type="text/javascript">
+
+		var employees = [{name:'khanh',age:28},
+		{name:'khan',age:27},
+		{name:'kha',age:24}
+		];
+		var content = '';
+		for (var employee of employees){
+				content +='<li>' + employee.name + '</li>';
+				document.getElementById('contain-list').innerHTML=content;
+		};
+		console.log(content);
+	
+</script>
 </body>
 </html>

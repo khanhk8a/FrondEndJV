@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>đổi màu chữ</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+	<div id="colorpad" style="">
+		<p>234</p>
+	</div>
+	<button onclick="setRandomColor()">Random Color</button>
+	<script type="text/javascript">
+		function getRandomColor() {
+			  var letters = '0123456789ABCDEF';
+			  var color = '#';
+			  for (var i = 0; i < 6; i++) {
+			    color += letters[Math.floor(Math.random() * 16)];
+			  }
+			  return color;
+			}
+
+
+
+			function setRandomColor() {
+			  $("#colorpad").css("color", getRandomColor());
+			}
+	</script>
+	
+</body>
+</html>
