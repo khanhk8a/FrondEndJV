@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Máy tính</title>
+	<style type="text/css" media="screen">
+		body {
+			padding: 0;
+			margin: 0;
+			font-family: "Times New Roman"
+		}
+		.maytinh {
+			width: 174px;
+			position: absolute;
+			/* top: 10%; */
+			left:  40%;
+			background-color: #273527;
+			font-size: 20px;
+			padding: 10px 20px;
+			border-radius: 6px;
+			color: white;
+		}
+		.caculator > td > input {
+			height: 30px;
+			line-height: 30px;
+			margin-bottom: 10px;
+		}
+		.caculator .theme {
+			padding:  5px 0;
+		}
+		.caculator .theme .theme1{
+			    width: 100%;
+			    height: 100%;
+			    padding: 4px;
+			    border-radius: 9px;
+		}
+	</style>
+</head>
+<body>
+	<div class="maytinh">
+		<table class="bangtinh">
+			<tr class="caculator">
+				<td colspan = 5><input type="text" id="display" readonly="readonly"> </td>
+			</tr>
+			<tr class="caculator">
+				<td class="theme"><button class="theme1" type="button" value="1" onclick="displayNumber(this.value)">1</button></td>
+				<td class="theme"><button class="theme1" type="button" value="2" onclick="displayNumber(this.value)">2</button></td>
+				<td class="theme"><button class="theme1" type="button" value="3" onclick="displayNumber(this.value)">3</button></td>
+				<td class="theme"><button class="theme1" type="button" value="+" onclick="displayNumber1(this.value)">+</button></td>
+				<td class="theme"><button class="theme1" type="button" value="-" onclick="displayNumber1(this.value)">-</button></td>
+			</tr>
+			<tr class="caculator">
+				<td class="theme"><button class="theme1" type="button" value="4" onclick="displayNumber(this.value)">4</button></td>
+				<td class="theme"><button class="theme1" type="button" value="5" onclick="displayNumber(this.value)">5</button></td>
+				<td class="theme"><button class="theme1" type="button" value="6" onclick="displayNumber(this.value)">6</button></td>
+				<td class="theme"><button class="theme1" type="button" value="*" onclick="displayNumber1(this.value)">*</button></td>
+				<td class="theme"><button  class="theme1" type="button" value="/" onclick="displayNumber1(this.value)">/</button></td>
+			</tr>
+			<tr class="caculator">
+				<td class="theme"><button class="theme1" type="button" value="7" onclick="displayNumber(this.value)">7</button></td>
+				<td class="theme"><button class="theme1" type="button" value="8" onclick="displayNumber(this.value)">8</button></td>
+				<td class="theme"><button class="theme1" type="button" value="9" onclick="displayNumber(this.value)">9</button></td>
+				<td class="theme"><button class="theme1" type="button" value="=" onclick="ketqua()">=</button></td>
+				<td class="theme"><button class="theme1" type="button" value="C" onclick="xoa()">C</button></td>
+			</tr>
+			<tr class="caculator">
+				<td colspan=3 class="theme"><button class="theme1" type="button" value="0" onclick="displayNumber(this.value)">0</button></td>
+				<td colspan=2 class="theme"><button class="theme1" type="button" value="." onclick="displayNumber(this.value)">.</button></td>
+			</tr>
+		</table>
+		
+	</div>
+	<script type="text/javascript">
+		var x = '';
+		
+		function a(id) {
+			return document.getElementById(id);
+		};
+		function hienthi()
+		{
+			a('display').value=x;
+			a('display').style.textAlign = 'left';
+		};
+		function displayNumber (num) {
+			if (a('display').style.textAlign == 'left'){
+			x+=num;
+			 hienthi();
+			}else {
+			x='';
+			 hienthi();
+			// body... 
+			}
+			
+		}
+		function displayNumber1 (num) {
+			x+=num;
+			 hienthi();
+			
+			
+		}
+		function xoa(){
+			x='';
+			 hienthi();
+		}
+		function ketqua(){
+			
+			if (x!='') {
+			a('display').value = eval(a('display').value);
+			x = a('display').value;
+			a('display').style.textAlign = 'right';
+			} else {
+				x='';
+			}
+		
+		}
+	</script>
+</body>
+</html>

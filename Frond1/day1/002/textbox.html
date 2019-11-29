@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>textbox show</title>
+	<link rel="stylesheet" href="textbox.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	  
+
+</head>
+<body>
+	<a onclick="pop()" class="btn">Show Box</a>
+	<div id="box">
+	<img src="123.png" alt="icon">
+	<h1>Tốt Lắm</h1>
+	<a onclick="pop()" class="close">Close</a>
+	</div>
+	<div class="MathCaculater">
+		Số thứ nhất: <input type="text" width="40" id="a"><br>
+		Số thứ hai :  <input type="text" width="40" id="b"><br>
+		<button type="button" onclick="tong()">Tính Tổng</button>
+		<p id="ketqua"></p>
+	</div>
+	<script type="text/javascript">
+			function tong(){
+			var	tong1 = Number(document.getElementById("a").value)+ Number(document.getElementById("b").value);
+			var kq = document.getElementById("ketqua");
+			kq.innerHTML = tong1;
+		}
+		var c = 0;
+		function pop(){
+			if (c == 0) {
+				document.getElementById("box").style.display = "block";
+				c = 1;
+			} else {
+				document.getElementById("box").style.display = "none";
+				c = 0;
+			}
+		}
+	</script>
+</body>
+</html>
