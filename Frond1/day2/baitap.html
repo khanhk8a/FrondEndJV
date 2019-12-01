@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		table, td{
+		border: 1px solid black;
+		    border-collapse: collapse;
+		}
+		.abc{
+			    border: none;
+		}
+		#target1{color:  red;}
+		#target2{color:  yellow;}
+		#target3{color:  green;}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>Hà nội</li>
+		<li>Đà Nẵng</li>
+		<li>TPHCM</li>
+	</ul>
+	<ol> <!-- ol có số thứ tự như là 123 hoặc abc -->
+		<li>Hà nội</li>
+		<li>Đà Nẵng</li>
+		<li>TPHCM</li>
+	</ol>
+	<table class="c123">
+		<thread>
+			<tr>
+				<td class="c123"> STT </td>
+				<td class="c123"> HỌ TÊN </td>
+				<td class="c123"> NĂM SINH </td>
+				<td class="c123"> ĐIỂM </td>
+			</tr>
+		</thread>
+			<tr>
+				<td class="c123"> 1 </td>
+				<td class="c123"> Nguyễn Văn A </td>
+				<td class="c123"> 1990 </td>
+				<td class="c123"> 7 </td>
+			</tr>
+			<tr>
+				<td class="c123"> 2 </td>
+				<td class="c123"> Nguyễn Văn B </td>
+				<td class="c123"> 2000 </td>
+				<td class="c123"> 6 </td>
+			</tr>
+			<tr>
+				<td class="c123"> 1 </td>
+				<td class="c123"> Nguyễn Văn C </td>
+				<td class="c123"> 1995 </td>
+				<td class="c123"> 9 </td>
+			</tr>
+		</tbody>
+	</table>
+	<!-- Thẻ Form -->
+	<div>
+		<form name="dangky" method="post" action="">
+			<p>
+				<label> Họ Tên </label>
+				<input type="text" name="hoten" value="" placeholder="Nhập họ tên">
+			</p>
+			<p>
+				<label> SDT </label>
+				<input type="text"
+       					onkeyup="this.value=this.value.replace(/[^\d]/,'')" placeholder="Nhập SDT">
+				<!-- <input type="number" maxlength="11" name="sdt" value="" placeholder="Nhập SDT" > -->
+				<a href="#">Gửi mã xác thực</a>
+			</p>
+
+			<p>
+				<label> Mã xác thực </label>
+				<input type="text" name="maxacthuc" value="" placeholder="Nhập mã xác thực">
+			</p>
+			<p>
+				<label> Email </label>
+				<input type="text" name="email" value="" placeholder="Nhập Email">
+			</p>
+			<p>
+				<label> Mật khẩu </label>
+				<input type="password" name="matkhau" value="" placeholder="Nhập mật khẩu">
+			</p>
+				<label> Giới tính </label>
+				<label> <input type="radio" name="gender" value="Nam" checked> Nam </label>
+				<label> <input type="radio" name="gender" value="Nữ"> Nữ </label>
+			<div>
+				<label> Ngày sinh </label>
+					<select name="sothich" multiple>
+						<option value="dabong"> đá bóng</option>
+						<option value="dabon"> xem phim</option>
+						<option value="dabo"> nghe nhạc</option>
+						<option value="dab"> ngủ</option>
+					</select>
+				<fieldset class="abc">
+					<!-- nếu muốn chọn option nào trước thêm thuộc tính selected -->
+					<!-- thuộc tính multiple chọn nhiều thuộc tính cùng 1 bảng -->
+					<select class="birth-day form-control" name="birth[day]"><option value="0">Ngày</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select>
+					<select class="birth-month form-control" name="birth[month]"><option value="0">Tháng</option><option value="1">01</option><option value="2">02</option><option value="3">03</option><option value="4">04</option><option value="5">05</option><option value="6">06</option><option value="7">07</option><option value="8">08</option><option value="9">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option></select>
+					<select class="birth-year form-control" name="birth[year]"><option value="0">Năm</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option></select>
+					<button type="submit">Đăng ký tài khoản</button>
+				</fieldset>
+				 <pre>
+		        thẻ textarea ( cho phép nhập nhiều dòng văn bản )
+		        thẻ input có type="text" chỉ nhập được 1 dòng văn bản
+		        thẻ textarea có thẻ đóng và thẻ mở
+		        có thuộc tính name
+		        thuộc tính rows ( số dòng )
+		        thuộc tính cols ( số cột )
+		    	</pre>
+			        <p>
+			            <label>Ghi chú</label>
+			            <textarea name="ghichu" placeholder="nhập nội dung ghi chú" rows="9" cols="50"></textarea>
+			        </p>
+			  	<p><input type="checkbox" name="thongtin"> Nhận thông tin khuyễn mãi </p>
+
+			</div>
+		</form>
+		<pre>
+        	cài 2 extension sau trong trình duyệt chrome
+        	1 - https://chrome.google.com/webstore/detail/lorem-ipsum-generator-def/mcdcbjjoakogbcopinefncmkcamnfkdb?hl=vi
+        	2 - https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm?hl=vi
+    	</pre>
+	</div>
+	<div id="target1">Thẻ số div 1</div>
+	<div id="target2">Thẻ số div 2</div>
+	<div id="target3">Thẻ số div 3</div>
+</body>
+</html>

@@ -36,7 +36,7 @@
  // 	a.w * a.h);
 //  console.log(acreageRetangles);
 
-//array filter
+//array filter(tìm các phần tử  thỏa mãn điều kiện đầu vào)
 // var numbers = [1, 2, 3, 4];
 // var valueNumbers = numbers.filter(function(x) {
 // 	return x % 2 === 0;
