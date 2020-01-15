@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+    // tính điểm TB cho học sinh
+    // đặt thứ tự cho tham số là cố định nên gọi hàm phải truyền biến vào theo đúng thứ tự của tham số trước đó
+    function diemtrungbinh(toan, ly , hoa) {
+        // code thực thi trong function
+        var diemtb;
+        diemtb = (toan + ly + hoa)/3;
+        return diemtb;
+    }
+
+
+    // gọi hàm
+    var diem_toan = 5;
+    var diem_ly = 7;
+    var diem_hoa = 9;
+    var ketqua = diemtrungbinh(diem_toan, diem_ly, diem_hoa);
+    console.log('diem tb : ' + ketqua);
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+    .container{
+        background: #d17b0a;
+        width: 900px;
+        margin: 0 auto;
+
+    }
+    .col1{
+        background: red;
+        width: 200px;
+        height: 300px;
+        float: left;
+    }
+    .col2{
+        background: blue;
+        width: 200px;
+        height: 300px;
+       float: right;
+    }
+    .clearfix{
+        content: '';
+        display: table;
+        clear: both;
+    }
+    </style>
+</head>
+<body>
+    <pre>
+        float có 3 giá trị: left, right, none
+        clear: left, right, both
+    </pre>
+    <div class="container clearfix">
+        <div class="col1" id="col1" onclick='document.getElementById("col1").style.background = "#000";'>cot 1</div>
+        <div class="col2">cot 2</div>
+        <!-- <div class="col3"></div> -->
+    </div>
+</body>
+</html>

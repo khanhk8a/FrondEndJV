@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="text/css" href="./normalize.css"/>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .clearfix::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .div1{
+            width: 100%;
+              height: 100px;  
+              background: red;
+        }
+        .div2{
+            width: 100%;
+             
+        }
+        .div21{
+            width: 20%; 
+              box-sizing: border-box;
+              padding: 25px;
+              background: yellowgreen;
+              min-height: 400px;
+              float: left;
+        }
+        .div22{
+              width: 80%;
+              box-sizing: border-box;
+              min-height: 400px;
+              padding: 5px; 
+              float: right;
+              background: rgb(50, 143, 205);
+        }
+        .div3{
+            width: 100%;
+              height: 100px;  
+              background: rgb(30, 255, 0);
+        }
+        @media only screen and (max-width: 640px) {
+            .div21{
+                min-height: 200px;
+                width: 100%;
+                float: none;
+            
+        }
+        .div22{
+              width: 100%;
+              float: none;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+            header
+    </div>
+    <div class="div2 clearfix">
+        <div class="div21"> menu trai</div>
+        <div class="div22"> content </div>
+    </div>
+    <div class="div3">footer</div>
+</body>
+</html>

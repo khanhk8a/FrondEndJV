@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Phương thức html()</h1>
+
+<div class="containerA" style="padding: 20px; background: green; color: orange">
+
+    <div class="row">
+        <div class="col1">
+            Pellentesque in ipsum id orci porta dapibus.
+            Donec rutrum congue leo eget malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.
+            Nulla porttitor accumsan tincidunt. Nulla quis lorem ut libero malesuada feugiat. Nulla porttitor accumsan tincidunt.
+        </div>
+        <div class="col2">
+            Pellentesque in ipsum id orci porta dapibus.
+            Donec rutrum congue leo eget malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.
+            Nulla porttitor accumsan tincidunt. Nulla quis lorem ut libero malesuada feugiat. Nulla porttitor accumsan tincidunt.
+        </div>
+    </div>
+</div>
+
+<button id="control" style="margin: 30px">Chuyển html</button>
+
+<div class="containerB" style="padding: 20px; background: green; color: orange">
+
+</div>
+
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $("#control").on("click", function () {
+
+            /**
+             *
+             * .html() dùng để lấy ra html trong 1 selector
+             * .html(value) dùng để đặt đoạn mã html value vào trong 1 selector
+             * text() chỉ can thiệp văn bản còn html() thì can thiệp được cả text và html
+             */
+            var ahtml = $(".containerA").html();
+
+            $(".containerB").html(ahtml);
+
+        });
+
+    });
+
+</script>
+
+</body>
+</html>

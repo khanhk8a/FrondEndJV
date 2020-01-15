@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p id="target">Nội dung thẻ p</p>
+
+<div style="margin: 30px">
+    <button id="control-show">Hiện thẻ p</button>
+    <button id="control-hide">Ẩn thẻ p</button>
+</div>
+
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $("#control-show").dblclick(function () {
+
+            // show() làm selector hiện khi mà nó đang ẩn
+            $("p#target").show();
+        });
+
+        $("#control-hide").dblclick(function () {
+            // hide() ẩn selector khi mà nó đang hiện
+            $("p#target").hide();
+        });
+
+
+    });
+</script>
+</body>
+</html>

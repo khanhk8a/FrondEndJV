@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        div {
+            padding: 30px;
+            margin: 20px;
+        }
+
+        #p1 {
+            color: red;
+        }
+
+        .class1 {
+            color: purple;
+        }
+
+        input[name='username'] {
+            border: 2px solid red;
+        }
+
+        .row .col {
+            background: violet;
+        }
+
+        .container > .row {
+            border: 5px solid black;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Jquery selector ( bộ chọn trong jquery )</h1>
+
+<div>Thẻ div</div>
+<p id="p1">thẻ p 1</p>
+<p class="class1">thẻ p class 1</p>
+
+<form name="login" method="post" action="">
+    <input name="username" value="" type="text">
+</form>
+
+
+<section class="container">
+    <section class="row">
+        Thẻ dòng
+        <section class="row">
+            <section class="col">Cột 1</section>
+            <section class="col">Cột 2</section>
+        </section>
+    </section>
+</section>
+
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function(){
+
+        // code jquery
+
+        // selector tên thẻ html
+        $("div").css("background", "orange");
+
+        // selector #id
+        $("#p1").css("background", "green");
+
+        // selector class .class
+        $(".class1").css("background", "black");
+
+        // selector thuộc tính
+        $("input[name='username']").css("padding", "40px");
+
+        // selector lồng selector
+        $(".row .col").css("padding", "40px");
+
+        // selector con trực tiếp của selector
+        $(".container > .row").css("padding", "40px");
+
+
+
+    });
+
+</script>
+</body>
+</html>

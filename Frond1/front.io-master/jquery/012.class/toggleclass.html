@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="container active" style="padding: 30px; background: orange">
+    <div class="row">
+        <div class="col">Col 1</div>
+        <div class="col">Col 2</div>
+    </div>
+</div>
+
+<div style="margin-top: 30px">
+    <button type="button" id="control">Toggle class css</button>
+</div>
+
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $("#control").on("click", function () {
+
+            $(".container").toggleClass("active");
+
+        });
+
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Phương thức text()</h1>
+
+<div class="containerA" style="padding: 20px; background: green; color: orange">
+    Pellentesque in ipsum id orci porta dapibus.
+    Donec rutrum congue leo eget malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.
+    Nulla porttitor accumsan tincidunt. Nulla quis lorem ut libero malesuada feugiat. Nulla porttitor accumsan tincidunt.
+    Nulla porttitor accumsan tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+    Donec velit neque, auctor sit amet aliquam vel, u
+    llamcorper sit amet ligula. Proin eget tortor risus. Donec rutrum congue leo eget malesuada.
+</div>
+
+<button id="control" style="margin: 30px">Chuyển text</button>
+
+<div class="containerB" style="padding: 20px; background: green; color: orange">
+
+</div>
+
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $("#control").on("click", function () {
+
+            /**
+             *
+             * .text() dùng để lấy ra văn bản trong 1 selector
+             * .text(value) dùng để đặt text value vào trong 1 selector
+             */
+            var atext = $(".containerA").text();
+
+            $(".containerB").text(atext);
+
+        });
+
+    });
+
+</script>
+
+</body>
+</html>

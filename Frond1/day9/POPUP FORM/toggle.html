@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Học web chuẩn</title>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<style>
+  .box {
+    border: 3px solid #eee;
+    display: none;
+    height: 100px;
+    margin-top: 5px;
+    padding: 10px;
+    width: 150px;
+  }
+  button{
+    margin-top: 5px;
+    padding: 10px;
+    width: 176px;
+  }
+  .box1 {
+    border: 3px solid #eee;
+    display: none;
+    height: 100px;
+    margin-top: 5px;
+    padding: 10px;
+    width: 150px;
+  }
+</style>
+<script>
+$(function(){
+  $('#toggle').click(function() {
+    $('.box').slideToggle(10);
+    $(".box1").hide();
+  });
+});
+$(function(){
+  $('#toggle1').click(function() {
+    $('.box1').slideToggle(10);
+    $(".box").hide();
+  });
+});
+
+</script>
+</head>
+
+<body>
+  <button type="button" id="toggle">Open</button>
+  <div class="box">In suscipit nec velit sit amet convallis. Integer</div>
+  <br>
+  <button type="button" id="toggle1">Open</button>
+  <div class="box1">Iiiiiiiiiiiin suscipit nec velit sit amet convallis. Integer</div>
+</body>
+</html>

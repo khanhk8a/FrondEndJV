@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<div class="container">
+    Pellentesque in ipsum id orci porta dapibus. Donec sollicitudin molestie malesuada.
+    Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+    Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Pellentesque in ipsum id orci porta dapibus.
+    Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Donec rutrum congue leo eget malesuada.
+    Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
+    Curabitur aliquet quam id dui posuere blandit. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
+</div>
+
+<div>
+    <button id="control">Đổi màu</button>
+</div>
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#control").click(function(){
+
+            $(".container").css("background", "green");
+            $(".container").css("color", "tomato");
+
+        });
+
+
+    });
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body{
+        width: 80%;
+        margin: auto;
+    }
+    .box1{
+        background:#7d7d7d;
+        height: 300px;
+        text-align: center;
+    }
+    .box1 p{
+        font-size: 50px;
+        padding-top: 100px;
+    }
+    .clearfix{
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .nav-menu{
+        background: yellow;
+    }
+    .nav-menu .menu{
+        list-style: none;
+        background: #ff6a00;
+    }
+    .nav-menu .menu .menu-item{
+        float: left;
+        padding: 10px;
+        display: block;
+        cursor: pointer;
+        position: relative;
+        
+    }
+    .nav-menu .menu .menu-item a{
+        font-size: 20px;
+        text-decoration: none;
+        color: white;
+    }
+    /* .nav-menu .menu .menu-item a .sub-menu::after{
+        content: ">";
+    } */
+    .nav-menu .menu .menu-item:hover {
+        background: red;
+
+    }
+    .nav-menu .menu .menu-item:hover .sub-menu {
+        display: block;
+    }
+    .nav-menu .menu .menu-item .sub-menu .sub-menuitem:hover .sub-menu1 {
+        display: block;
+    }
+    .sub-menu {
+    margin-top: 3px;
+    position: absolute;
+    top: 41px;
+    background: #ff6a00;
+    list-style: none;
+    width: 200px;
+    left: 0;
+    display: none;
+    }
+    .sub-menu  .sub-menuitem{
+        padding: 10px;
+        border-bottom: 1px solid white;
+        position: relative;
+    }
+
+    .sub-menu  .sub-menuitem:hover{
+        background: red;
+       
+    }
+    .sub-menu1  .sub-menuitem1:hover{
+        background: red;
+       
+    }
+    .sub-menu1  .sub-menuitem1{
+        padding: 10px;
+        border-bottom: 1px solid white;
+        position: relative;
+    }
+    .sub-menu1 {
+    position: absolute;
+    background: #ff6a00;
+    max-width: 300px;
+    list-style: none;
+    top:0;
+    width: 200px;
+    left: 200px;
+    display: none;
+    margin-left: 1px;
+    }
+    
+       
+    
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <p>Tạo Dropmenu Trong html</p>
+    </div>
+    <nav class="nav-menu">
+        <ul class="menu clearfix">
+            <li class="menu-item">
+                <a href="#"> Trang chủ </a>
+            </li>
+            <li class="menu-item">
+                <a href="#"> Sản phẩm </a>
+                <ul class="sub-menu">
+                    <li class="sub-menuitem">
+                        <a href="#"> Sản phẩm 1 </a> 
+                        
+                    </li>
+                    <li class="sub-menuitem"><a href="#"> Sản phẩm 2 </a>
+                        <ul class="sub-menu1">
+                            <li class="sub-menuitem1">
+                                <a href="#"> Sản phẩm 11 </a> 
+                            </li>
+                            <li class="sub-menuitem1"><a href="#"> Sản phẩm 12 </a> </li>
+                            <li class="sub-menuitem1"><a href="#"> Sản phẩm 13 </a> </li>
+                            <li class="sub-menuitem1"><a href="#"> Sản phẩm 14 </a> </li>
+                        </ul> </li>
+                    <li class="sub-menuitem"><a href="#"> Sản phẩm 3 </a> </li>
+                    <li class="sub-menuitem"><a href="#"> Sản phẩm 4 </a> </li>
+                </ul>
+            </li>
+            <li class="menu-item"><a href="#"> Tin tức </a> </li>
+            <li class="menu-item">
+                <a href="#"> Sự Kiện </a> 
+                <ul class="sub-menu">
+                    <li class="sub-menuitem">
+                        <a href="#"> Sự kiện 1 </a> 
+                    </li>
+                    <li class="sub-menuitem"><a href="#"> Sự kiện 2 </a> </li>
+                    <li class="sub-menuitem"><a href="#"> Sự kiện 3 </a> </li>
+                    <li class="sub-menuitem"><a href="#"> Sự kiện 4 </a> </li>
+                </ul>
+            </li>
+            <li class="menu-item"><a href="#"> Liên hệ </a> </li>
+        </ul>
+    </nav>
+</body>
+</html>

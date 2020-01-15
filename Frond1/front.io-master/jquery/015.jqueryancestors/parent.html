@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Jquery parent() là gì ?</h1>
+
+<pre>
+    The parent() method returns the direct parent element of the selected element.
+    Phương thức parent() trả về thẻ cha trực tiếp của đối tượng được chọn
+</pre>
+
+
+<nav>
+    <ul>
+        <li><a href="#" id="home">Trang chủ</a></li>
+        <li><a href="#" id="intro">Giới thiệu</a></li>
+        <li><a href="#" id="product">Sản phẩm</a></li>
+        <li><a href="#" id="new">Tin tức</a></li>
+        <li><a href="#" id="contact">Liên hệ</a></li>
+    </ul>
+</nav>
+
+<div style="margin: 30px">
+    <button id="control">
+        Chọn parent
+    </button>
+</div>
+
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("#control").on("click", function () {
+            var parent = $("#home").parent();
+            parent.css("background", "red");
+        });
+
+
+
+    });
+</script>
+
+</body>
+</html>

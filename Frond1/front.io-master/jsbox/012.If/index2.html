@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Câu lệnh điều else if</h1>
+
+<pre>
+    if (điều kiện 1) {
+        // điều kiện 1 trả về true => các câu lệnh trong đây sẽ chạy
+
+    } else if (điều kiện 2) {
+         // điều kiện 2 trả về true => các câu lệnh trong đây sẽ chạy
+
+    } else if (điều kiện 3) {
+        // điều kiện 3 trả về true => các câu lệnh trong đây sẽ chạy
+
+    } else if (điều kiện 4) {
+        // điều kiện 4 trả về true => các câu lệnh trong đây sẽ chạy
+
+    } else {
+        // khi mà điều kiện 1,2,3,4 đều trả về false thì các câu lệnh trong {} else sẽ chạy
+
+    }
+
+    Lưu ý : khi mà điều kiện 1 == true
+    điều kiện 2 == true
+    điều kiện 3 == true
+    điều kiện 4 == true
+    vậy thì điều kiện nào khi mà js chạy trước thì nó sẽ chọn các câu lệnh trong điều kiện đó chạy mà thôi
+    ví dụ gặp đk 1 mà true thì chỉ thực hiện code trong {} của đk1
+    nhưng khi mà đảo điều kiện 2 lên trước điều kiện 1 thì chỉ chạy điều 2 mà thôi
+</pre>
+
+<script type="text/javascript">
+
+    var age = 5;
+    console.log(age < 18);
+    console.log(age < 30);
+    console.log(age < 50);
+
+    if (age < 30) {
+        console.log("thanh niên");
+    } else if (age < 18) {
+        console.log("trẻ em");
+    } else if (age < 50) {
+        console.log("trung niên");
+    } else {
+        console.log("tuổi già");
+    }
+
+</script>
+</body>
+</html>

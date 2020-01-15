@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Jquery callback</h1>
+
+<h2>Callback function là 1 hàm được thực thi sau khi 1 sự kiện hay 1 hiệu ứng được thực thi và kết thúc hoàn toàn</h2>
+<h2>Ví dụ về callback như sự kiện các bạn gọi điện hay gửi tin nhắn xong nhà mạng sẽ trừ tiền vào tài khoản vậy</h2>
+<h2>hành động trừ tiền của nhà mạng viễn thông như 1 callback được thực hiện ngay sau khi các bạn gửi sms hay gọi điện</h2>
+
+<h2>Callback trong jquery rất hay gặp ở dạng 1 function không có tên ví dụ như :</h2>
+<pre>
+    function() {
+        // code thực thi trong callback
+    }
+</pre>
+
+<h2> Ví dụ như document ready cũng có chứa 1 callback</h2>
+
+<pre>
+    $(document).ready(function() {
+        // code chạy khi document đã được tải xuống
+    });
+</pre>
+
+<h2>Hay 1 sự kiện click chuột</h2>
+
+<pre>
+    $("#btn").click(function() {
+        // code chạy trong callback sau khi nút có id là btn được click
+    });
+</pre>
+</body>
+</html>

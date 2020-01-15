@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box1{
+            width: 100px;
+            height: 100px;
+        }
+        #box2{
+            margin-top: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box1"></div>
+    <button onclick="doimau('red')">Đỏ</button>
+    <button onclick="doimau('green')">Xanh</button>
+    <button onclick="doimau('yellow')">Vàng</button>
+    <button onclick="doimau('violet')">Tím</button>
+
+    <div id="box2"></div>
+    <button id="button1" onclick="hienthi()"> An </button>
+    <!-- <button onclick="hienthi('none')">Ẩn</button>    -->
+    <script> 
+    
+
+    function doimau(color){
+            if(color){
+                 document.getElementById("box1").style.backgroundColor = color;
+
+            }
+    }
+
+    function hienthi(){
+
+        if(document.getElementById("box2").style.display = 'none'){
+            document.getElementById("button1").innerHTML = "An";
+            document.getElementById("box2").style.display = 'block';
+        }
+
+        if(document.getElementById("box2").style.display = 'block'){
+            document.getElementById("button1").innerHTML = "Hiện";
+            document.getElementById("box2").style.display = 'none';
+        }
+
+
+    }
+
+    </script>
+    
+</body>
+</html>

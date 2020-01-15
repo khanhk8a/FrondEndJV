@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+    var colors = ["xanh", "đỏ", "tím", "vàng"];
+
+    // thêm các phần tử vào mảng
+    console.log(colors);
+    /**
+     * splice(param1, param2, param3, param4)
+     * param1 là key ( vị trí ) mà chúng ta sẽ thêm các phần tử mới vào
+     * param2 sẽ là số phần tử chúng ta muốn gỡ bỏ khỏi mảng
+     * param3 param4 param5 ... sẽ là các giá trị của các phần tử mới mà chúng ta muốn thêm vào mảng
+     */
+    colors.splice(0, 0, "hồng", "da cam", "đen");
+
+    console.log(colors);
+</script>
+</body>
+</html>

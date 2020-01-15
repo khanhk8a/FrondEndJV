@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+    // khai báo 1 đối tượng object trong js = {}
+
+    // trong 1 đối tượng gồm nhiều thuộc tính property
+    // mỗi thuộc tính thì sẽ có tên thuộc tính
+    // khai báo tên thuộc tính ( viết liền , không sử dụng ký tự đặc biệt , không sử dụng dấu cách và
+    // không cần đặt trong nháy '' hoặc ""
+
+    // giá trị của thuộc tính nếu là chuỗi thì cần đặt trong '' hay ""
+    // nếu giá trị là số thì không cần '' ""
+
+    // phân tách tên thuộc tính và giá trị của thuộc tính bằng dấu :
+
+    // các cặp thuộc_tính:giá_trị được phân tách bởi dấu ,
+
+    var car = {name:'toyota',model:"vios", price: 590000000};
+
+    // truy xuất vào các thuộc tính của 1 đối tượng object tên_object.tên_thuộc_tính
+    console.log('tên của ô tô ' + car.name);
+    console.log('model của ô tô ' + car.model);
+    console.log('price của ô tô ' + car.price);
+
+    // cách 2 để truy xuất được vào thuộc tính của object
+    console.log('tên của ô tô ' + car['name']);
+    console.log('model của ô tô ' + car['model']);
+    console.log('price của ô tô ' + car['price']);
+
+    console.log(car);
+</script>
+</body>
+</html>

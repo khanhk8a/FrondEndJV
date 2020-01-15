@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+
+
+
+<div class="container">
+    <h1>Sự kiện resize thay đổi kích thước trình duyệt</h1>
+    <p id="cal" style="color: red; margin-top: 30px"></p>
+</div>
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        // lấy ra độ rộng của cửa số trình duyệt
+        var w = $(window).width();
+
+        // lấy ra độ cao của cửa sổ trình duyệt
+        var h = $(window).height();
+
+        $('#cal').html("độ rộng :" + w + " pixel độ cao " + h + " pixel");
+
+        $(window).resize(function(){
+
+            // lấy ra độ rộng của cửa số trình duyệt
+            var w = $(window).width();
+
+            // lấy ra độ cao của cửa sổ trình duyệt
+            var h = $(window).height();
+
+            $('#cal').html("độ rộng :" + w + " pixel độ cao " + h + " pixel");
+
+        });
+    });
+</script>
+
+</body>
+</html>

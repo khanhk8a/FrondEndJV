@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> attr() method jquery được sử dụng để lấy ra hoặc đặt giá trị cho các thuộc tính trong selector của JQ</h1>
+<div style="margin: 20px; padding: 20px">
+    <img src="https://znews-photo.zadn.vn/w480/Uploaded/dqvpxpck/2019_05_03/vespa.jpg" id="source" />
+</div>
+
+
+<div style="margin: 20px; padding: 20px">
+    <button id="control" type="button">Copy attribute</button>
+</div>
+
+<div style="margin: 20px; padding: 20px">
+    <img src="" alt="ảnh copy" id="target">
+</div>
+
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        //
+        $("#control").on("click", function () {
+            var src = $("img#source").attr("src");
+
+            $("img#target").attr("src", src);
+
+        });
+
+    });
+
+</script>
+</body>
+</html>

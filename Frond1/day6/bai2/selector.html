@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        nav .menu,nav .sub-menu{
+            list-style: none;
+           
+        }
+        nav .menu > li.menu-item{
+            float: left;
+           
+        }
+        nav .menu li.menu-item a{
+            background: yellow;
+         
+            
+        }
+        nav .menu > li.menu-item > a{
+            background: red;
+
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li class="menu-item">
+                <a href="#">Trang chủ</a>
+            
+            <ul class="sub-menu">
+                    <li class="menu-item">
+                            <a href="#">Trang chủ1</a>
+                    </li>
+                    <li class="menu-item">
+                            <a href="#">Trang chủ2</a>
+                    </li>
+                    <li class="menu-item">
+                            <a href="#">Trang chủ3</a>
+                    </li>
+            </ul>
+        </li>
+            <li class="menu-item">
+                    <a href="#">Liên hệ</a>
+               
+                <ul class="sub-menu">
+                        <li class="menu-item">
+                                <a href="#">Tiên hệ1</a>
+                        </li>
+                        <li class="menu-item">
+                                <a href="#">Liên hệ2</a>
+                        </li>
+                        <li class="menu-item">
+                                <a href="#">Liên hệ3</a>
+                        </li>
+                </ul>
+            
+            </li>
+        </ul>
+    </nav>
+    
+</body>
+</html>

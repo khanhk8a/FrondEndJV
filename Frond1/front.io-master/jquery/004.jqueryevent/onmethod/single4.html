@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        .container {
+            margin-top: 20px;
+            background: orange;
+            padding: 20px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+
+<h1>mouseenter ( di chuột đi vào đối tượng) và mouseleave (di chuột ra khỏi đối tượng)</h1>
+
+<div class="container">
+    Nulla porttitor accumsan tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+    Donec sollicitudin molestie malesuada. Nulla porttitor accumsan tincidunt.
+    Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla quis lorem ut libero
+    malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet elit, eget tincidunt
+    nibh pulvinar a. Nulla porttitor accumsan tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</div>
+
+<div class="container">
+    Nulla porttitor accumsan tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+    Donec sollicitudin molestie malesuada. Nulla porttitor accumsan tincidunt.
+    Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla quis lorem ut libero
+    malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet elit, eget tincidunt
+    nibh pulvinar a. Nulla porttitor accumsan tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</div>
+
+<div class="container">
+    Nulla porttitor accumsan tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+    Donec sollicitudin molestie malesuada. Nulla porttitor accumsan tincidunt.
+    Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla quis lorem ut libero
+    malesuada feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet elit, eget tincidunt
+    nibh pulvinar a. Nulla porttitor accumsan tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</div>
+
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function() {
+
+       /* $(".container").mouseenter(function(){
+            $(this).css("background", "red");
+        });
+
+        $(".container").mouseleave(function () {
+
+            $(this).css("background", "orange")
+        });
+
+        $(".row").mouseenter(function(){
+            $(this).css("background", "red");
+        });*/
+
+
+        // chuyển sang on method
+        $(".container").on("mouseenter", function(){
+            $(this).css("background", "red");
+        });
+
+        $(".container").on("mouseleave", function () {
+
+            $(this).css("background", "orange")
+        });
+
+        $(".row").on("mouseenter", function(){
+            $(this).css("background", "red");
+        });
+
+    });
+</script>
+</body>
+</html>

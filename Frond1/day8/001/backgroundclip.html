@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .box1 {
+            background-color: red;
+            height: 200px;
+            width: 100%;
+            padding: 20px;
+            border: 15px dashed gray;
+            box-sizing: border-box;
+            /* background-clip: content-box; */
+            background-clip: border-box;
+        }
+
+    </style>
+</head>
+
+<body>
+    <pre>
+        Thuộc tính background-clip sẽ quyết định vị trí đổ màu nền cho thẻ html
+        Thuộc tính này có 3 giá trị :
+        border-box : mặc định , đổ từ border trở vào
+        padding-box: đổ từ padding trờ vào content
+        content-box: đổ màu mỗi vùng content
+    </pre>
+
+    <div class="box1">
+        box1
+    </div>
+
+</body>
+</html>

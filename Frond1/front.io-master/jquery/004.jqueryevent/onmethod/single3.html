@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Event keypress nhấn phím</h1>
+
+<div class="container">
+    <label>nội dung</label>
+    <textarea name="content" style="width: 80%; height: 100px"></textarea>
+    <p id="countCharacter"></p>
+</div>
+
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+
+        /*$("textarea[name='content']").keypress(function () {
+
+            // val() sẽ lấy nội dung của thẻ input hoặc textarea
+            var value = $(this).val();
+            console.log(value);
+            $("#countCharacter").html('Bạn đã gõ : ' + value.length);
+
+        });*/
+
+        $("textarea[name='content']").on("keypress", function () {
+
+            // val() sẽ lấy nội dung của thẻ input hoặc textarea
+            var value = $(this).val();
+            console.log(value);
+            $("#countCharacter").html('Bạn đã gõ : ' + value.length);
+
+        });
+
+    });
+
+</script>
+
+</body>
+</html>

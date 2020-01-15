@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label>Số 1</label>
+        <input id="so1" type="text" name="so1" value="">
+    </div>
+
+    <div>
+        <label>Số 2</label>
+        <input id="so2" type="text" name="so2" value="">
+    </div>
+
+    <div id="ketqua">Kết quả</div>
+
+    <div>
+        <button onclick="ketqua(1)">Tổng</button>
+        <button onclick="ketqua(2)">Hiệu</button>
+        <button onclick="ketqua(3)">Tích</button>
+        <button onclick="ketqua(4)">Thương</button>
+    </div>
+    <script>
+       
+        var kq;
+        var tich;
+        var chia;
+        var hieu;
+        function ketqua(x){
+            var a = parseInt(document.getElementById('so1').value);
+            var b = parseInt(document.getElementById('so2').value);
+            kq = a + b;
+            tich = a * b;
+            hieu = a - b;
+            chia = a/b
+            switch(x){
+                case 1:
+                 document.getElementById('ketqua').innerText = kq;
+                break;
+                case 2:
+                document.getElementById('ketqua').innerText = hieu;
+                break;
+                case 3:
+                document.getElementById('ketqua').innerText = tich;
+                break;
+                case 4:
+                document.getElementById('ketqua').innerText = chia;
+                break;
+            }
+        }
+    </script>
+    
+</body>
+</html>

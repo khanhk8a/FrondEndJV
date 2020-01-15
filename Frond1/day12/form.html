@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h1>Đăng ký thông tin sinh viên</h1>
+
+    <form name="dangky" method="post" action="/Frond1//day12/form.html">
+        <p>
+            <label>Họ tên</label>
+            <input id="hoten" type="text" name="hoten" value="">
+            <span id="checkhoten" style="color:red"></span>
+        </p>
+
+        <p>
+            <label>Số điện thoại</label>
+            <input id="sdt" type="text" name="dienthoai" value="">
+            <span id="checksdt" style="color:red"></span>
+        </p>
+
+        <p>
+            <label>Email</label>
+            <input id="email" type="text" name="email" value="">
+            <span id="checkemail" style="color:red"></span>
+        </p>
+
+        <p>
+            <label>Mật khẩu</label>
+            <input id="matkhau" type="text" name="password" value="">
+            <span id="checkmatkhau" style="color:red"></span>
+        </p>
+
+        <p>
+            <label>Nhập lại Mật khẩu</label>
+            <input  id="nhaplaimatkhau" type="text" name="password" value="">
+            <span id="checknhaplaimatkhau" style="color:red"></span>
+        </p>
+
+        <p>
+            <button type="button" id="dangki" onclick="dangkythanhcong()">Đăng ký thông tin</button>
+        </p>
+
+    </form>
+
+    <div id="ketqua" style="padding: 20px; background-color: green; display: none;">
+        <h3>Đăng ký thành công</h3>
+        <p id="name">Họ tên là : ...</p>
+        <p id="telephone">Số điện thoại : ...</pid="name">
+        <p id="email1">Email : ...</p>
+        <p id="password">Mật khẩu : ...</p>
+    </div>
+    <script>
+               
+            function dangkythanhcong(){
+                if(kiemtraten() && checkmobile() && ValidateEmail() && checkPassword() && checkNhaplaimatkhau()){
+                    document.getElementById("ketqua").style.display = 'block';
+                } else {
+                    document.getElementById("ketqua").style.display = 'none';
+                }
+                            
+
+            }
+            function checkmobile(){
+                var vnf_regex = /((09|03|07|08|05)+([0-9]{8})\b)/g;
+                    var  mobile = document.getElementById("sdt").value;
+                    if(mobile !==''){
+                        if (vnf_regex.test(mobile) == true) 
+                        {
+                            document.getElementById("checksdt").style.display = 'none';
+                            return true;
+                        } else{
+                            document.getElementById("checksdt").style.display = 'block';
+                            document.getElementById("checksdt").innerHTML='Số điện thoại của bạn không đúng định dạng!';
+                            return false;     
+                           
+                        }
+                    }else{
+                        document.getElementById("checksdt").style.display = 'block';
+                        document.getElementById("checksdt").innerHTML='Bạn chưa điền số điện thoại!';
+                        return false; 
+                    }
+            }
+            function kiemtraten(){
+                if(document.getElementById('hoten').value != ""){
+                    document.getElementById('checkhoten').style.display="none";
+                    return true;
+                } else {
+                    document.getElementById('checkhoten').style.display="block";
+                    document.getElementById('checkhoten').innerHTML = "Họ tên không được để rỗng";
+                    return false; 
+                }
+
+            }
+            function ValidateEmail(){
+                    var vnf_regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                    var  email = document.getElementById("email").value;
+                    if(email !==''){
+                        if (vnf_regex.test(email) == true) 
+                        {
+                            document.getElementById("checkemail").style.display = 'none';
+                            return true;
+                           
+                        } else{   
+                            document.getElementById("checkemail").style.display = 'block';
+                            document.getElementById("checkemail").innerHTML='Email của bạn không đúng định dạng!';  
+                            return false; 
+                            
+                        }
+                    }else{
+                        document.getElementById("checkemail").style.display = 'block';
+                        document.getElementById("checkemail").innerHTML='Bạn chưa điền email!';
+                        return false; 
+                    }
+            }  
+            function checkPassword(){
+                    var vnf_regex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
+                    var  matkhau1 = document.getElementById("matkhau").value;
+                    if(matkhau1 !==''){
+                        if (vnf_regex.test(matkhau1) == true) 
+                        {
+                            document.getElementById("checkmatkhau").style.display = 'none';
+                            return true;
+                           
+                        } else{   
+                            document.getElementById("checkmatkhau").style.display = 'block';
+                            document.getElementById("checkmatkhau").innerHTML='Mật khẩu ít nhất 8 kí tự chữ và số và 1 kí tự đặc biệt';  
+                            return false; 
+                            
+                        }
+                    }else{
+                        document.getElementById("checkmatkhau").style.display = 'block';
+                        document.getElementById("checkmatkhau").innerHTML='Bạn chưa điền mật khẩu!';
+                        return false; 
+                    }
+            }   
+            function checkNhaplaimatkhau(){
+                if(document.getElementById('nhaplaimatkhau').value != ""){
+                    document.getElementById('checknhaplaimatkhau').style.display="none";
+                    if(document.getElementById('matkhau').value == document.getElementById('nhaplaimatkhau').value){
+                        document.getElementById('checknhaplaimatkhau').style.display="none";
+                        return true;
+                    } else {
+                        document.getElementById('checknhaplaimatkhau').style.display="block";
+                        document.getElementById('checknhaplaimatkhau').innerHTML = "Bạn điền mật khẩu không giống nhau";
+                        return false; 
+                    }
+                    
+                } else {
+                    document.getElementById('checknhaplaimatkhau').style.display="block";
+                    document.getElementById('checknhaplaimatkhau').innerHTML = "Bạn chưa nhập lại mật khẩu";
+                    return false; 
+                }
+            } 
+    </script>
+
+</body>
+</html>

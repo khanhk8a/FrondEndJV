@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Câu lệnh switch case</h1>
+
+<pre>
+    biểu thức thông thường là 1 biến trong js
+    switch(biểu thức) {
+        case x:
+            // các câu lệnh case x
+            break;
+        case y:
+            // các câu lệnh case y
+            break;
+        case z:
+            // các câu lệnh case z
+            break;
+        case w:
+            // các câu lệnh case w
+            break;
+        default:
+            // các câu lệnh default
+    }
+
+    biểu thức trong () == x => code block x sẽ chạy
+    biểu thức trong () == y => code block y sẽ chạy
+    biểu thức trong () == z => code block z sẽ chạy
+    biểu thức trong () == w => code block w sẽ chạy
+    trong trường hợp biểu thức trong () không bằng bắt cứ 1 case nào
+    thì code block trong default sẽ chạy
+
+</pre>
+
+<script type="text/javascript">
+
+    var day = 12;
+
+    switch (day) {
+        case 0:
+            // chủ nhật
+            console.log('Chủ nhật');
+            break;
+        case 2:
+            // thứ 2
+            console.log("Thứ 2");
+            break;
+        case 3:
+            // thứ 3
+            console.log("Thứ 3");
+            break;
+        case 4:
+            // thứ 4
+            console.log("Thứ 4");
+            break;
+        case 5:
+            // thứ 5
+            console.log("Thứ 5");
+            break;
+        case 6:
+            // thứ 6
+            console.log("Thứ 6");
+            break;
+        case 7:
+            // thứ 7
+            console.log("Thứ 7");
+            break;
+        default:
+            // mặc định
+            console.log("Không tồn tại thứ này trong tuần");
+    }
+</script>
+</body>
+</html>

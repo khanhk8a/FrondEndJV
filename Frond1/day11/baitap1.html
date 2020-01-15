@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <table  width="600" style="text-align:center">
+        <tr>
+            <td width="200" height="35">
+                <label for="soa">Nhập số a</label>
+            </td>
+            <td width="400">
+            <input type="text" name="soa" id="soa">
+            </td>
+        </tr>
+        <tr>
+            <td  height="35">
+            <label for="sob">Nhập số b</label>
+            </td>
+            <td>
+            <input type="text" name="sob" id="sob">
+             </td>
+        </tr>
+         <tr>
+            <td  height="35">
+            <label for="ketqua">Kết quả</label>
+             </td>
+            <td>
+            <input disabled type="text" name="ketqua" id="ketqua">
+             </td>
+        </tr>
+         <tr>
+             <td colspan="2"  height="35">
+                <input type="button" name="tinhtong" id="tinhtong" value="Tính tổng" onClick="fc_tinhtong(soa.value,document.getElementById('sob').value)">
+            </td>
+         </tr>
+        </table>
+        <script>
+             //tinh tong 2 giá trị nhập vào
+            function fc_tinhtong(a,b)
+            {
+                document.getElementById("ketqua").value=(parseInt(a)+parseInt(b));
+            }
+        </script>
+</body>
+</html>

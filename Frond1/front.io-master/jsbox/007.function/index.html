@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Function JS là khối {} được khai báo để thực hiện 1 nhiệm vụ cụ thể</h1>
+<p>ví dụ hàm tính chu vi hình tròn</p>
+<p>hàm tính chu vi hình vuông , hình chữ nhật</p>
+<p>chuyển đổi độ C thành độ F</p>
+<p>tính điểm trung bình của học sinh sau đó thì xếp loại hs đó</p>
+
+<script type="text/javascript">
+    // r là tham số của hàm chỉ có giá trị trong hàm
+    // r là tham số và luôn đi kèm với khai báo hàm
+    function chuvihinhtron(r) {
+        // code thực thi của function
+        var chuvi = r*2*3.14;
+        // return trả về giá trị của biến chuvi và sẽ kết thúc hàm
+        return chuvi;
+        // tất cả các lệnh sau return trong function thì đều không chạy
+    }
+
+    // gọi hàm bằng cách gọi tên hàm
+    var c = chuvihinhtron(5);
+    alert('chu vi hình tròn có bán kính 5cm : '  + c);
+
+    var e = 10;
+    // gọi hàm thì bản chất là truyền giá trị từ biến hoặc là giá trị cho tham số của hàm
+    chuvihinhtron(e);
+
+    // tại sao phải sử dụng hàm => cho phép dễ duy trì và bảo trì nâng cấp mã nguồn
+    // cũng như là module hóa mã nguồn
+
+</script>
+</body>
+</html>

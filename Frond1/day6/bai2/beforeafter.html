@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .control{
+            background: slategrey;
+            padding: 10px;
+        }
+        .control::before{
+            content: "Noi dung before";
+            display: block;
+            background: red;
+            
+        }
+        .control::after{
+            content: "Noi dung after";
+            display: block;
+            background: green;
+        }
+
+    </style>
+</head>
+<body>
+    <pre>
+        before:  thêm phía trước "thêm bất cứ css nào để style content"
+        after: thêm nooin dung content vào bên trong phía sau thẻ được chon và có thể thêm bất cứ thuộc tính css nào để style content cho ::after
+    </pre>
+    <div class="control">
+        <p title="the video demo">the video demo</p>
+    </div>
+</body>
+</html>

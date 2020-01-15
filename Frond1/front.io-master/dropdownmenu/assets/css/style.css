@@ -1,0 +1,98 @@
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.site-wrapper {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+header .header-inner {
+    background: gray;
+    font-size: 32px;
+    text-align: center;
+    padding: 30px 0;
+}
+
+header .main-navigation .main-menu{
+    list-style: none;
+    background: yellow;
+    padding: 0;
+    margin: 0;
+}
+
+/* li.menu-item là li cấp 1 */
+.main-navigation .main-menu li.menu-item {
+    background: orange;
+    float: left;
+    position: relative;
+}
+
+/* li.submenu-item là li cấp 2 , cấp 3 , cấp 4 */
+.main-navigation .main-menu li.submenu-item {
+    position: relative;
+}
+
+/* Khi hover vào thẻ li cấp 1 */
+.main-navigation .main-menu li.menu-item:hover > ul.submenu{
+    display: block;
+}
+/* Khi hover vào thẻ li cấp 2 trở lên */
+.main-navigation .main-menu li.submenu-item:hover > ul.submenu{
+    display: block;
+}
+
+.main-navigation .main-menu li a {
+    color: white;
+    font-size: 18px;
+    display: block;
+    background: orange;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.main-navigation .main-menu li a:hover {
+    background: tomato;
+}
+
+/*
+    Begin submenu
+ */
+
+    /**
+    SUBMENU NẰM TRONG li.menu-item cấp 1
+     */
+    nav li.menu-item > .submenu {
+        display: none;
+        width: 300px;
+        position: absolute;
+        top: 40px;
+        left: 0;
+    }
+
+    /**
+    SUBMENU NẰM TRONG li.menu-item cấp 2, cấp 3 , cấp 4 ...
+     */
+    nav li.menu-item .submenu .submenu {
+        display: none;
+        width: 300px;
+        position: absolute;
+        top: 0;
+        left: 300px;
+    }
+
+    nav .submenu li.submenu-item{
+        border-bottom: 1px solid white;
+    }
+
+/*
+    End submenu
+ */

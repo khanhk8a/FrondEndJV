@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<h1>For in ra các số từ 1 -> 100</h1>
+<div id="target"></div>
+<div id="totalLoop">Tổng số lần chạy vòng lặp : ?</div>
+
+<button onclick="loop1()">In</button>
+
+<script type="text/javascript">
+    function loop1() {
+
+        var html = '';
+        // count là số lần chạy vòng lặp
+        var count = 0;
+        for (var i = 1;i <= 100;i++) {
+
+            // code thực thi trong vòng lặp
+            // html = html + i;
+            count++;
+            console.log('lần chạy thứ ' + count);
+            html += ' - ' + i;
+        }
+
+        document.getElementById('target').innerHTML = html;
+        document.getElementById('totalLoop').innerHTML = 'Tổng số lần chạy vòng lặp :' + count;
+
+    }
+</script>
+</body>
+</html>

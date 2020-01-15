@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Do ... While in ra các số từ 1 -> 100</h1>
+<div id="target"></div>
+<div id="totalLoop">Tổng số lần chạy vòng lặp : ?</div>
+
+<button onclick="loop1()">In</button>
+
+<script type="text/javascript">
+
+
+    function loop1() {
+
+        var html = '';
+        var i = 1;
+        var count = 0;
+
+
+        // code trong do {} sẽ chạy lần đầu tiên kể ra khi điều kiện tron while() trả về false
+        // nếu điều kiện trong while() trả về true thì nó sẽ chạy giống vòng lặp while()
+        do {
+            if (i == 50) {
+                break;
+            }
+            count++;
+            console.log('Lần chạy thứ ' + count);
+
+            html += " - " + i;
+
+            i++;
+        } while(i <= 100);
+
+        document.getElementById('target').innerHTML = html;
+        document.getElementById('totalLoop').innerHTML = 'Tổng số lần chạy vòng lặp :' + count;
+
+    }
+
+</script>
+
+</body>
+</html>

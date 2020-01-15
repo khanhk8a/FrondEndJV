@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box1{
+            position: relative;
+            background: red;
+            width: 100px;
+            height: 100px;
+            top:0;
+            left: 0;
+            transform: translate(0,0,0,0);
+            animation: dichuyen ease-in-out 4s infinite;
+        }
+        
+        @keyframes dichuyen{  
+            25% {
+            background: green;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            transition: 4s;
+            top:0;
+            left: 200px;
+            }
+            50% {
+            background: yellow;
+            width: 100px;
+            height: 100px;
+            border-radius: 0;
+            transition: 4s;
+            top:200px;
+            left: 200px;
+            }
+            75% {
+            background: black;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            transition: 4s;
+            top:200px;
+            left: 0;
+            }
+
+          
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+
+    </div>
+    <div class="box2">
+        
+    </div>
+</body>
+</html>

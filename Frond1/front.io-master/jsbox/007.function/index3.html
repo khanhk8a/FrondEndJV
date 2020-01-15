@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<p>Phạm vi của biến trong js</p>
+
+
+<script type="text/javascript">
+
+    var diem_toan = 5;
+    var diem_ly = 7;
+    var diem_hoa = 9;
+
+    // tính điểm TB cho học sinh
+    // đặt thứ tự cho tham số là cố định nên gọi hàm phải truyền biến vào theo đúng thứ tự của tham số trước đó
+
+    // toan , ly , hoa là các tham số khi mà chúng ta khai báo function
+    // tham số này chỉ có phạm vi hoạt động trong function {}
+    // những biến được khai báo trong function cũng chỉ có phạm vi trong function {}
+    // và chúng ta gọi những biến và tham số trong hàm có phạm vi scope là local ( cục bộ )
+    // biến cục bộ
+    function diemtrungbinh(toan, ly , hoa) {
+        // code thực thi trong function
+
+        // gọi 1 biến global toàn cục ở bên trong 1 function
+        // console.log('test gọi global trong function ' +  diem_hoa);
+
+        var diemtb;
+        diemtb = (toan + ly + hoa)/3;
+        return diemtb;
+    }
+
+    // khi mà các bạn gọi 1 biến cục bộ bên ngoài hàm mà nó chưa được khai báo bên ngoài hàm
+    // thì nó sẽ bị lỗi vì nó là biến cục bộ
+    // Uncaught ReferenceError: diemtb is not defined
+    // console.log('test : ' + diemtb);
+
+    // gọi hàm
+
+    // biến toàn cục ( global ) là những biến được khai báo bên ngoài hàm
+    // biến toàn cục này có tác dụng ở tất cả mọi nơi bên ngoài các function
+
+    var ketqua = diemtrungbinh(diem_toan, diem_ly, diem_hoa);
+    console.log('diem tb : ' + ketqua);
+
+    console.log(diem_toan);
+</script>
+</body>
+</html>

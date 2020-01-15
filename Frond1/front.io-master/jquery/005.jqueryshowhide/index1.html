@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<button id="control-show">SHOW hiện</button>
+<button id="control-hide">HIDE ẩn</button>
+
+<div class="container" style="padding: 20px; background: green; color: orange">
+    Nội dung container
+</div>
+
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+
+        $("#control-show").on("click", function(){
+
+            // show(speed, callback)
+            $(".container").show(1000, function () {
+                alert("Đã hiện");
+            });
+        });
+
+
+        $("#control-hide").on("click", function(){
+            // hide(speed, callback)
+            $(".container").hide(1000, function () {
+                alert("Đã ẩn");
+            });
+        });
+    });
+
+</script>
+</body>
+</html>
